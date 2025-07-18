@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rishaub Kumar - Full Stack Developer</title>
+    <meta name="description" content="Rishaub Kumar - B.Tech CSE student and passionate full-stack developer from India. Building scalable web solutions and contributing to open-source.">
+    
+    <!-- TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-black text-white font-['Inter'] overflow-x-hidden">
+    <!-- Custom Cursor -->
+    <div id="cursor" class="fixed w-4 h-4 bg-cyan-400 rounded-full pointer-events-none z-50 mix-blend-difference transition-transform duration-200"></div>
+    <div id="cursor-trail" class="fixed w-2 h-2 bg-purple-400 rounded-full pointer-events-none z-50 mix-blend-difference transition-all duration-300"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-40 bg-black/20 backdrop-blur-md border-b border-cyan-500/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent font-['Orbitron']">
+                        Rishaub Kumar
+                    </h1>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="nav-link text-gray-300 hover:text-cyan-400 transition-colors duration-300">Home</a>
+                        <a href="#about" class="nav-link text-gray-300 hover:text-cyan-400 transition-colors duration-300">About</a>
+                        <a href="#experience" class="nav-link text-gray-300 hover:text-cyan-400 transition-colors duration-300">Experience</a>
+                        <a href="#opensource" class="nav-link text-gray-300 hover:text-cyan-400 transition-colors duration-300">Open Source</a>
+                        <a href="#projects" class="nav-link text-gray-300 hover:text-cyan-400 transition-colors duration-300">Projects</a>
+                        <a href="#resume" class="nav-link text-gray-300 hover:text-cyan-400 transition-colors duration-300">Resume</a>
+                        <a href="#contact" class="nav-link text-gray-300 hover:text-cyan-400 transition-colors duration-300">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-cyan-400">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-black/95 backdrop-blur-md border-t border-cyan-500/20">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home" class="mobile-nav-link block px-3 py-2 text-gray-300 hover:text-cyan-400">Home</a>
+                <a href="#about" class="mobile-nav-link block px-3 py-2 text-gray-300 hover:text-cyan-400">About</a>
+                <a href="#experience" class="mobile-nav-link block px-3 py-2 text-gray-300 hover:text-cyan-400">Experience</a>
+                <a href="#opensource" class="mobile-nav-link block px-3 py-2 text-gray-300 hover:text-cyan-400">Open Source</a>
+                <a href="#projects" class="mobile-nav-link block px-3 py-2 text-gray-300 hover:text-cyan-400">Projects</a>
+                <a href="#resume" class="mobile-nav-link block px-3 py-2 text-gray-300 hover:text-cyan-400">Resume</a>
+                <a href="#contact" class="mobile-nav-link block px-3 py-2 text-gray-300 hover:text-cyan-400">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <!-- Animated Background -->
+        <div class="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-cyan-900/20"></div>
+        <div id="particles" class="absolute inset-0"></div>
+        
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center" data-aos="fade-up" data-aos-duration="1000">
+                <!-- Profile Image -->
+                <div class="mb-8 flex justify-center">
+                    <div class="relative">
+                        <div class="w-48 h-48 rounded-full bg-gradient-to-r from-cyan-400 to-purple-500 p-1 animate-pulse">
+                            <div class="w-full h-full rounded-full bg-black flex items-center justify-center">
+                                <img src="public/rishaub-profile.jpg" alt="Rishaub Kumar" class="w-44 h-44 rounded-full object-cover border-4 border-black">
+                            </div>
+                        </div>
+                        <div class="absolute -inset-4 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full blur-xl opacity-30 animate-pulse"></div>
+                    </div>
+                </div>
+                
+                <!-- Animated Text -->
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
+                    <span class="bg-gradient-to-r from-cyan-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent font-['Orbitron']">
+                        Hi, I'm Rishaub Kumar
+                    </span>
+                </h1>
+                
+                <div class="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8">
+                    <span id="typewriter" class="font-['Orbitron']"></span>
+                </div>
+                
+                <p class="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto">
+                    Turning ideas into scalable web solutions
+                </p>
+                
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                    <a href="public/resume.pdf" download class="glow-button group">
+                        <i class="fas fa-download mr-2"></i>
+                        Download Resume
+                        <div class="glow-effect"></div>
+                    </a>
+                                    <a href="https://github.com/RishaubKumar" target="_blank" class="glow-button-secondary group">
+                    <i class="fab fa-github mr-2"></i>
+                    View GitHub
+                    <div class="glow-effect"></div>
+                </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-cyan-400 text-2xl"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 relative">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                    <span class="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent font-['Orbitron']">
+                        About Me
+                    </span>
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right" data-aos-duration="800">
+                    <div class="glass-card p-8">
+                        <h3 class="text-2xl font-bold mb-6 text-cyan-400 font-['Orbitron']">Education & Background</h3>
+                        <p class="text-gray-300 leading-relaxed mb-6">
+                            B.Tech CSE student at VIT Bhopal (2023–2027) with 9.04 CGPA. Passionate about building full-stack applications, contributing to open-source, and solving real-world problems with tech.
+                        </p>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <i class="fas fa-graduation-cap text-cyan-400 mr-3"></i>
+                                <span class="text-gray-300">B.Tech Computer Science & Engineering</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-university text-cyan-400 mr-3"></i>
+                                <span class="text-gray-300">VIT Bhopal (2023-2027)</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-cyan-400 mr-3"></i>
+                                <span class="text-gray-300">CGPA: 9.04</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-left" data-aos-duration="800">
+                    <h3 class="text-2xl font-bold mb-8 text-cyan-400 font-['Orbitron']">Technical Skills</h3>
+                    <div class="space-y-6">
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-300">C++</span>
+                                <span class="text-cyan-400">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-300">Java</span>
+                                <span class="text-cyan-400">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-300">JavaScript</span>
+                                <span class="text-cyan-400">88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="88"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-300">Node.js</span>
+                                <span class="text-cyan-400">82%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="82"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-300">React.js</span>
+                                <span class="text-cyan-400">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-300">MongoDB</span>
+                                <span class="text-cyan-400">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-300">MySQL</span>
+                                <span class="text-cyan-400">78%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="78"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-300">Git</span>
+                                <span class="text-cyan-400">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 relative">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                    <span class="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent font-['Orbitron']">
+                        Experience
+                    </span>
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <!-- Experience Timeline -->
+                <div class="relative">
+                    <!-- Timeline Line -->
+                    <div class="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-cyan-400 to-purple-500"></div>
+                    
+                    <!-- Experience Item 1 -->
+                    <div class="experience-item" data-aos="fade-right" data-aos-duration="800">
+                        <div class="flex items-start space-x-6">
+                            <div class="flex-shrink-0">
+                                <div class="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full flex items-center justify-center relative">
+                                    <i class="fas fa-briefcase text-black text-xl"></i>
+                                    <div class="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full blur-lg opacity-30"></div>
+                                </div>
+                            </div>
+                            <div class="flex-1 glass-card p-6 ml-8">
+                                <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                                    <h3 class="text-xl font-bold text-cyan-400 font-['Orbitron']">Process Analyst Intern</h3>
+                                    <span class="text-purple-400 text-sm font-medium">Oct 2024 – Jan 2025</span>
+                                </div>
+                                <h4 class="text-lg font-semibold text-gray-300 mb-3">Ozibook</h4>
+                                <ul class="space-y-2">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-cyan-400 mt-1 mr-3 flex-shrink-0"></i>
+                                        <span class="text-gray-300">Implemented SEO and profile optimization, increasing organic traffic by 30%</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-cyan-400 mt-1 mr-3 flex-shrink-0"></i>
+                                        <span class="text-gray-300">Designed Notion pages and internal workflows for efficient client onboarding</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-cyan-400 mt-1 mr-3 flex-shrink-0"></i>
+                                        <span class="text-gray-300">Created tailored prompt structures to streamline client content generation</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Experience Item 2 -->
+                    <div class="experience-item" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
+                        <div class="flex items-start space-x-6">
+                            <div class="flex-shrink-0">
+                                <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-400 rounded-full flex items-center justify-center relative">
+                                    <i class="fas fa-code text-black text-xl"></i>
+                                    <div class="absolute inset-0 bg-gradient-to-r from-purple-500 to-cyan-400 rounded-full blur-lg opacity-30"></div>
+                                </div>
+                            </div>
+                            <div class="flex-1 glass-card p-6 ml-8">
+                                <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                                    <h3 class="text-xl font-bold text-purple-400 font-['Orbitron']">Full-Stack Web Developer Intern</h3>
+                                    <span class="text-cyan-400 text-sm font-medium">July 2024 – Sept 2024</span>
+                                </div>
+                                <h4 class="text-lg font-semibold text-gray-300 mb-3">ADM Welfare Society</h4>
+                                <ul class="space-y-2">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-purple-400 mt-1 mr-3 flex-shrink-0"></i>
+                                        <span class="text-gray-300">Developed and maintained the Renu Health Care website using Node.js and MongoDB</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-purple-400 mt-1 mr-3 flex-shrink-0"></i>
+                                        <span class="text-gray-300">Rectified major backend issues to enhance performance and stability</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-purple-400 mt-1 mr-3 flex-shrink-0"></i>
+                                        <span class="text-gray-300">Oversaw end-to-end website deployment and ongoing backend support</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Open Source Contributions Section -->
+    <section id="opensource" class="py-20 relative">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                    <span class="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent font-['Orbitron']">
+                        Open Source Contributions
+                    </span>
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 mx-auto rounded-full"></div>
+                <p class="text-xl text-gray-300 mt-6 max-w-3xl mx-auto">
+                    Giving back to the developer community through open-source.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Hacktoberfest 2024 -->
+                <div class="opensource-card" data-aos="fade-up" data-aos-duration="800">
+                    <div class="glass-card p-8 h-full relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-cyan-400 to-purple-500 rounded-full opacity-10 blur-3xl"></div>
+                        <div class="relative z-10">
+                            <div class="flex items-center mb-6">
+                                <div class="w-12 h-12 bg-gradient-to-r from-orange-400 to-red-500 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-code-branch text-white text-lg"></i>
+                                </div>
+                                <h3 class="text-2xl font-bold text-cyan-400 font-['Orbitron']">Hacktoberfest 2024</h3>
+                            </div>
+                            <p class="text-gray-300 mb-6">
+                                Participated in Hacktoberfest by submitting PRs to multiple open-source repositories, contributing to the global open-source community.
+                            </p>
+                            <div class="flex items-center text-sm text-gray-400">
+                                <i class="fas fa-calendar-alt mr-2"></i>
+                                <span>October 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- GSSOC Contributor -->
+                <div class="opensource-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <div class="glass-card p-8 h-full relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-purple-500 to-cyan-400 rounded-full opacity-10 blur-3xl"></div>
+                        <div class="relative z-10">
+                            <div class="flex items-center mb-6">
+                                <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-users text-white text-lg"></i>
+                                </div>
+                                <h3 class="text-2xl font-bold text-purple-400 font-['Orbitron']">GSSOC Contributor</h3>
+                            </div>
+                            <p class="text-gray-300 mb-6">
+                                Contributed to collaborative open-source projects, enhancing features and fixing bugs while learning from the community.
+                            </p>
+                            <div class="flex items-center text-sm text-gray-400">
+                                <i class="fas fa-calendar-alt mr-2"></i>
+                                <span>Ongoing</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 relative">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                    <span class="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent font-['Orbitron']">
+                        Featured Projects
+                    </span>
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- Project 1: Madad -->
+                <div class="project-card" data-aos="fade-up" data-aos-duration="800">
+                    <div class="glass-card p-8 h-full">
+                        <div class="mb-6">
+                            <h3 class="text-2xl font-bold mb-4 text-cyan-400 font-['Orbitron']">Madad</h3>
+                            <p class="text-gray-300 mb-6">
+                                A comprehensive P2P lending platform that connects borrowers and lenders directly, featuring secure transactions, credit scoring, and automated loan management.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="tech-tag">React.js</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                                <span class="tech-tag">Express.js</span>
+                                <span class="tech-tag">JWT</span>
+                                <span class="tech-tag">REST API</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 mt-auto">
+                            <a href="#" class="project-btn primary">
+                                <i class="fas fa-external-link-alt mr-2"></i>
+                                Live Preview
+                            </a>
+                            <a href="#" class="project-btn secondary">
+                                <i class="fab fa-github mr-2"></i>
+                                GitHub Repo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2: Nestly -->
+                <div class="project-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <div class="glass-card p-8 h-full">
+                        <div class="mb-6">
+                            <h3 class="text-2xl font-bold mb-4 text-cyan-400 font-['Orbitron']">Nestly</h3>
+                            <p class="text-gray-300 mb-6">
+                                A modern room rental platform with advanced search filters, secure payment integration, and real-time messaging between tenants and landlords.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="tech-tag">React.js</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">Socket.io</span>
+                                <span class="tech-tag">Stripe API</span>
+                                <span class="tech-tag">AWS S3</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 mt-auto">
+                            <a href="#" class="project-btn primary">
+                                <i class="fas fa-external-link-alt mr-2"></i>
+                                Live Preview
+                            </a>
+                            <a href="#" class="project-btn secondary">
+                                <i class="fab fa-github mr-2"></i>
+                                GitHub Repo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="py-20 relative">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                    <span class="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent font-['Orbitron']">
+                        Resume
+                    </span>
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto" data-aos="fade-up" data-aos-duration="800">
+                <div class="glass-card p-8 text-center">
+                    <div class="mb-8">
+                        <i class="fas fa-file-pdf text-6xl text-cyan-400 mb-4"></i>
+                        <h3 class="text-2xl font-bold mb-4 text-cyan-400 font-['Orbitron']">Download My Resume</h3>
+                        <p class="text-gray-300 mb-8">
+                            Get a detailed overview of my skills, experience, and achievements in a professional format.
+                        </p>
+                        <a href="public/resume.pdf" download class="glow-button-large group">
+                            <i class="fas fa-cloud-download-alt mr-3"></i>
+                            Download Resume (PDF)
+                            <div class="glow-effect"></div>
+                        </a>
+                    </div>
+                    
+                    <!-- Resume Preview -->
+                    <div class="mt-12">
+                        <h4 class="text-xl font-bold mb-6 text-cyan-400">Resume Preview</h4>
+                        <div class="resume-preview">
+                            <iframe src="public/resume.pdf" class="w-full h-96 border border-cyan-500/30 rounded-lg"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 relative">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                    <span class="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent font-['Orbitron']">
+                        Get In Touch
+                    </span>
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Contact Info -->
+                <div data-aos="fade-right" data-aos-duration="800">
+                    <div class="glass-card p-8">
+                        <h3 class="text-2xl font-bold mb-8 text-cyan-400 font-['Orbitron']">Contact Information</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-envelope text-black"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-300">Email</h4>
+                                    <a href="mailto:rishaubkumar534@gmail.com" class="text-cyan-400 hover:text-purple-400 transition-colors">
+                                        rishaubkumar534@gmail.com
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fab fa-whatsapp text-black"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-300">WhatsApp</h4>
+                                    <a href="https://wa.me/919058286673" target="_blank" class="text-cyan-400 hover:text-purple-400 transition-colors">
+                                        +91-9058286673
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-map-marker-alt text-black"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-300">Location</h4>
+                                    <p class="text-cyan-400">India</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div data-aos="fade-left" data-aos-duration="800">
+                    <div class="glass-card p-8">
+                        <h3 class="text-2xl font-bold mb-8 text-cyan-400 font-['Orbitron']">Send Message</h3>
+                        <form id="contact-form" class="space-y-6">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" required class="form-input">
+                                <label for="name" class="form-label">Name</label>
+                            </div>
+                            
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" required class="form-input">
+                                <label for="email" class="form-label">Email</label>
+                            </div>
+                            
+                            <div class="form-group">
+                                <textarea id="message" name="message" rows="5" required class="form-input"></textarea>
+                                <label for="message" class="form-label">Message</label>
+                            </div>
+                            
+                            <button type="submit" class="glow-button w-full group">
+                                <i class="fas fa-paper-plane mr-2"></i>
+                                Send Message
+                                <div class="glow-effect"></div>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Socials Section -->
+    <section class="py-20 relative">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                    <span class="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent font-['Orbitron']">
+                        Connect With Me
+                    </span>
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="flex justify-center space-x-8" data-aos="fade-up" data-aos-duration="800">
+                <a href="https://github.com/RishaubKumar" target="_blank" class="social-link github" title="View my GitHub Projects">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/rishaub-kumar-339330219" target="_blank" class="social-link linkedin">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://wa.me/919058286673" target="_blank" class="social-link whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+            
+            <!-- GitHub Stats Card -->
+            <div class="mt-12 flex justify-center" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                <img src="https://github-readme-stats.vercel.app/api?username=RishaubKumar&show_icons=true&theme=radical&hide_border=true&bg_color=000000&text_color=00ffff&icon_color=8b5cf6" 
+                     alt="GitHub Stats" class="rounded-lg shadow-2xl">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-cyan-500/20">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-gray-400">
+                © 2024 Rishaub Kumar. Built with ❤️ using modern web technologies.
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html> 
