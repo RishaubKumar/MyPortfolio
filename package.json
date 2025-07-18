@@ -1,0 +1,26 @@
+{
+  "name": "rishaub-kumar-portfolio",
+  "version": "1.0.0",
+  "description": "Rishaub Kumar's Personal Portfolio Website",
+  "main": "index.html",
+  "scripts": {
+    "start": "echo 'Static site - open index.html in browser'",
+    "build": "echo 'Static site - no build required'",
+    "dev": "echo 'Static site - open index.html in browser'"
+  },
+  "keywords": [
+    "portfolio",
+    "developer",
+    "fullstack",
+    "react",
+    "nodejs",
+    "mongodb"
+  ],
+  "author": "Rishaub Kumar",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RishaubKumar/portfolio"
+  },
+  "homepage": "https://rishaubkumar.vercel.app"
+} 
